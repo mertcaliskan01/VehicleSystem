@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Login</h1>
+
+@using (Html.BeginForm())
+{
+    <div>@Html.Label("Login name")</div>
+    <div>@Html.TextBox("name")</div>
+    <div>@Html.Label("password")</div>
+    <div>@Html.TextBox("password")</div>
+    <input type ="submit" value="Login"/>
+    
+}

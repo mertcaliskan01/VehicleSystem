@@ -1,0 +1,24 @@
+﻿@using System.Security.Claims
+
+
+<ul class="navbar-nav">
+    @if (User.Identity.IsAuthenticated)
+    {
+
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-page="" title="Manage">@User.Identity.Name!</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" name="LogOut" asp-controller="Users" asp-action="LogOut">LogOut</a>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" name="CreateRegister" asp-controller="Users" asp-action="Create">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" name="LoginRegister" asp-controller="Users" asp-action="Login">Login</a>
+        </li>
+    }
+</ul>

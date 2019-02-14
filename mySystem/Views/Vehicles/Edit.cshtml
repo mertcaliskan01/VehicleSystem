@@ -1,0 +1,71 @@
+﻿@model myLibrary.Model.Vehicle
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Vehicle</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="name" class="control-label"></label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nickName" class="control-label"></label>
+                <input asp-for="nickName" class="form-control" />
+                <span asp-validation-for="nickName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="model" class="control-label"></label>
+                <input asp-for="model" class="form-control" />
+                <span asp-validation-for="model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="brand" class="control-label"></label>
+                <input asp-for="brand" class="form-control" />
+                <span asp-validation-for="brand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="plate" class="control-label"></label>
+                <input asp-for="plate" class="form-control" />
+                <span asp-validation-for="plate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="modelYear" class="control-label"></label>
+                <input asp-for="modelYear" class="form-control" />
+                <span asp-validation-for="modelYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="vehicleType" class="control-label"></label>
+                <input asp-for="vehicleType" class="form-control" />
+                <span asp-validation-for="vehicleType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="color" class="control-label"></label>
+                <input asp-for="color" class="form-control" />
+                <span asp-validation-for="color" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsActive" /> @Html.DisplayNameFor(model => model.IsActive)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" name="BackToList" >Back to List</a>
+</div>
+
